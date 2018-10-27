@@ -1,0 +1,39 @@
+<div class="row mt-5">
+  <div class="col">
+    <button type="button" class="btn btn-primary float-right mb-3" data-toggle="modal" data-target="#modalBook" (click)="resetForm()">New Book</button>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Idioma</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Oferta</th>
+          <th scope="col">&nbsp;</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books | paginate: {itemsPerPage: 7, currentPage: pageActual}; index as i">
+
+          <th scope="row"> {{i+1}}</th>
+          <td>{{book.titulo}}</td>
+          <td>{{book.autor}}</td>
+          <td>{{book.idioma}}</td>
+          <td>{{book.precio}}€</td>
+          <td>{{book.oferta == 1 ? 'SI' : 'NO'}}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onPreUpdateBook(book)" data-toggle="modal" data-target="#modalBook">Update</button>
+          </td>
+          <td>
+            <a href="/admin/list-books" class="btn btn-danger" (click)="onDeleteBook(book.id)">Delete</a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+  </div>
+</div>
+<app-modal></app-modal>

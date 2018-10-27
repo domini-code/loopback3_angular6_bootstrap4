@@ -1,0 +1,65 @@
+<!-- Modal -->
+<div id="modalBook" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{!this.dataApiService.selectedBook.id ? 'New Book' : 'Update Book'}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-book" #formBook="ngForm" (ngSubmit)="onSaveBook(formBook)">
+          <input type="hidden" id="bookId" name="bookId" class="form-control" [(ngModel)]="this.dataApiService.selectedBook.id">
+          <div class="form-group">
+            <label for="">Titulo</label>
+            <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Titulo" [(ngModel)]="this.dataApiService.selectedBook.titulo">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="idioma">Idioma</label>
+              <select name="idioma" id="idioma" class="form-control" [(ngModel)]="this.dataApiService.selectedBook.idioma">
+                <option value="Inglés">Inglés</option>
+                <option value="Castellano">Castellano</option>
+              </select>
+
+            </div>
+            <div class="form-group col-md-6">
+              <label for="precio">Precio</label>
+              <input type="text" id="precio" name="precio" class="form-control" placeholder="0,00€" [(ngModel)]="this.dataApiService.selectedBook.precio">
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="autor">Autor</label>
+              <input type="text" id="autor" name="autor" class="form-control" placeholder="Autor" [(ngModel)]="this.dataApiService.selectedBook.autor">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="oferta">Oferta</label>
+              <select name="oferta" id="oferta" class="form-control" [(ngModel)]="this.dataApiService.selectedBook.oferta">
+                <option value="1">SI</option>
+                <option value="0">NO</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="portada">Portada</label>
+              <input type="text" id="portada" name="portada" class="form-control" placeholder="Portada" [(ngModel)]="this.dataApiService.selectedBook.portada">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="link_amazon">Link Amazon</label>
+              <input type="text" id="link_amazon" name="link_amazon" class="form-control" placeholder="Link Amazon" [(ngModel)]="this.dataApiService.selectedBook.link_amazon">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" cols="50" rows="4" [(ngModel)]="this.dataApiService.selectedBook.descripcion"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">Save Book</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
