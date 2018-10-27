@@ -1,4 +1,4 @@
-# loopback3_angular6_bootstrap4
+# Loopback 3, Angular 6 & Bootstrap 4
 Hola y bienvenido. 
 
 En este repo, encontrarás el código del proyecto de Loopback 3, Angular 6 & Bootstrap 4. 
