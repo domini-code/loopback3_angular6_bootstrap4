@@ -29,6 +29,9 @@
     "type": "",
     "url": ""
   },
+  "engines": {
+  "node": "6.2.0"
+},
   "license": "UNLICENSED",
   "description": "apiBooks"
 }
