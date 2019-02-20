@@ -1,37 +1,53 @@
 {
-  "name": "apiBooks",
-  "version": "1.0.0",
-  "main": "server/server.js",
-  "engines": {
-    "node": ">=4"
-  },
+  "name": "front",
+  "version": "0.0.0",
   "scripts": {
-    "lint": "eslint .",
-    "start": "node .",
-    "posttest": "npm run lint"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
+  "private": true,
   "dependencies": {
-    "compression": "^1.0.3",
-    "cors": "^2.5.2",
-    "helmet": "^3.10.0",
-    "loopback": "^3.22.0",
-    "loopback-boot": "^2.6.5",
-    "loopback-component-explorer": "^6.2.0",
-    "loopback-connector-mongodb": "^3.8.0",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0"
+    "@angular/animations": "^7.2.5",
+    "@angular/common": "^7.2.5",
+    "@angular/compiler": "^7.2.5",
+    "@angular/core": "^7.2.5",
+    "@angular/forms": "^7.2.5",
+    "@angular/http": "^7.2.5",
+    "@angular/platform-browser": "^7.2.5",
+    "@angular/platform-browser-dynamic": "^7.2.5",
+    "@angular/router": "^7.2.5",
+    "bootstrap": "^4.3.1",
+    "core-js": "^2.6.5",
+    "jquery": "^3.3.1",
+    "ngx-pagination": "^3.2.1",
+    "ngx-spinner": "^7.0.0",
+    "popper.js": "^1.14.7",
+    "rxjs": "~6.4.0",
+    "zone.js": "~0.8.29"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0"
-  },
-  "repository": {
-    "type": "",
-    "url": ""
-  },
-  "engines": {
-  "node": "6.2.0"
-},
-  "license": "UNLICENSED",
-  "description": "apiBooks"
+    "@angular-devkit/build-angular": "~0.13.2",
+    "@angular/cli": "~7.3.2",
+    "@angular/compiler-cli": "^7.2.5",
+    "@angular/language-service": "^7.2.5",
+    "@types/jasmine": "~3.3.9",
+    "@types/jasminewd2": "~2.0.6",
+    "@types/node": "~11.9.4",
+    "codelyzer": "~4.5.0",
+    "jasmine-core": "~3.3.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.5",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "protractor": "~5.4.2",
+    "ts-node": "~8.0.2",
+    "tslint": "~5.12.1",
+    "typescript": "~3.3.3"
+  }
 }
